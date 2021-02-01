@@ -1,0 +1,81 @@
+.form-group {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.img-space {
+  border: dashed 2px #d3d3d3;
+  border-radius: 8px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.img-space img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.placeholder-image { border-radius: 8px; }
+
+.file-input-profile-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.uploaded-image { object-fit: contain; }
+
+.file-input-profile {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.remove-image-button {
+  position: absolute;
+  right: -20px;
+  border-radius: 5px;
+  bottom: -20px;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  line-height: 25px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(230, 68, 40);
+  background-color: white;
+  z-index: 2px;
+}
+
+.remove-image-button:hover { cursor: pointer; }
+
+.add-to-project-button {
+  position: absolute;
+  left: 2px;
+  border-radius: 5px;
+  bottom: -20px;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  line-height: 25px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(28, 192, 69);
+  background-color: white;
+  z-index: 2px;
+}
+
+.add-to-project-button { cursor: pointer; }
+
+.file-input-profile:hover { cursor: pointer; }

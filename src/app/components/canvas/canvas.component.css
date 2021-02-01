@@ -1,0 +1,85 @@
+.canvas-page-container {
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-top: 4px solid rgba(230, 230, 230, 0.8);
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../../../assets/images/background1.jpg");
+  /* background: linear-gradient(white, rgb(0, 110, 255)); */
+}
+
+.canvas-options {
+  width: 200px;
+  height: 640px;
+  margin-left: 20px;
+  color: black;
+  font-family: 'poppins-semibold';
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(253, 253, 253);
+}
+
+.options-header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(253, 253, 253);
+}
+
+.drawing-mode-toggle-header {
+  margin-top: 50px;
+}
+
+.drawing-mode-toggle {
+  margin-top: 10px;
+}
+
+.line-width-header {
+  margin-top: 30px;
+}
+
+.line-width-slider {
+  padding-bottom: 40px;
+}
+
+.image-upload-container {
+  width: 175px;
+  height: 125px;
+}
+
+.image-upload-container:hover {
+  cursor: pointer;
+}
+
+.color-picker {
+  height: 300px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.canvas {
+  background-color: white;
+  border-radius: 5px;
+}
+.canvas-container {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(19, 121, 255, 0.7);
+}
+
+.clear-canvas-button {
+  font-family: 'poppins-semibold';
+  color: grey;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}

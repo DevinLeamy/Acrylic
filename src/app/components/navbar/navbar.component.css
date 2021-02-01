@@ -1,0 +1,22 @@
+.navbar-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 63px;
+}
+
+.toolbar {
+  background-color: white;
+}
+
+.login-button {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+}
+
+.logout-button {
+  background-color: rgb(0, 110, 255);
+  color: white;
+}

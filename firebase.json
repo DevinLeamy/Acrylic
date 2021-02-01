@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "acrylic-31bca",
+    "public": "dist/express",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

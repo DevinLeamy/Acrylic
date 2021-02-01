@@ -1,0 +1,8 @@
+<div class="navbar-container">
+    <mat-toolbar class='toolbar'>
+        <mat-icon aria-lable="Acrylic site icon" aria-hidden='false'>palette</mat-icon>
+        <span>Acrylic</span>
+        <button *ngIf="!this.authenticated" mat-raised-button color='warn' class='login-button' (click)='this.authService.login()'>Login</button>
+        <button *ngIf="this.authenticated" mat-raised-button class='login-button logout-button' (click)='this.authService.logout()'>Logout</button>
+    </mat-toolbar>
+</div>

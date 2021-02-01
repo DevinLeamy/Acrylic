@@ -1,0 +1,35 @@
+<div class='canvas-page-container'>
+  <div class='canvas-container'>
+   <canvas
+    id='canvas'
+    width="600"
+    height="670"
+    class='canvas'
+   ></canvas>
+   <mat-card class='canvas-options'>
+    <span class='drawing-mode-toggle-header'>
+      <u>Drawing Mode</u>
+    </span>
+    <mat-slide-toggle class='drawing-mode-toggle' (change)='this.setDrawingMode($event)' [(checked)]="this.canvasOptions.isDrawingMode" color='primary'>
+    </mat-slide-toggle>
+    <span class='line-width-header'>
+      <u>Brush Width</u>
+    </span>
+    <mat-slider
+      class='line-width-slider'
+      min='1'
+      max='40'
+      step='1'
+      [value]='this.canvasOptions.lineWidth'
+      (input)="this.setLineWidth($event)"
+      color="primary"
+    >
+    </mat-slider>
+    <div class='image-upload-container'>
+      <app-image-uploader (onImageUpload)='this.addImageToCanvas($event)'></app-image-uploader>
+    </div>
+    <color-sketch class='color-picker' [color]="this.canvasOptions.color" style="width: 200px" (onChangeComplete)='this.setColor($event)'></color-sketch>
+  </mat-card>
+  <button mat-raised-button class='clear-canvas-button' (click)='this.onClearCanvas()'>clear</button>
+  </div>
+</div>

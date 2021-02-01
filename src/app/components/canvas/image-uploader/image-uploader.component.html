@@ -1,0 +1,15 @@
+<div class="form-group">
+  <div class="custom-file file-input-profile-container">
+      <input type="file" accept='image/png, image/jpg' (change)="fileChangeEvent($event)" class="file-input-profile">
+      <div class="img-space">
+          <ng-container *ngIf="imageUploaded; else placeholder">
+              <img [src]="this.imagePath" alt='uploaded image' class='uploaded-image'/>
+          </ng-container>
+          <ng-template #placeholder>
+              <img src="../../../../assets/images/placeholder.png" alt='placeholder image' class="placeholder-image">
+          </ng-template>
+      </div>
+  </div>
+  <button class='remove-image-button' *ngIf='imageUploaded' (click)='this.removeImage()'>x</button>
+  <button class='add-to-project-button' *ngIf='imageUploaded' (click)='this.uploadImage()'>+</button>
+</div>
