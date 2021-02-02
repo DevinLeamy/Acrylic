@@ -8,8 +8,8 @@
   border-top: 4px solid rgba(230, 230, 230, 0.8);
   background-position: center center;
   background-size: cover;
-  background-image: url("../../../assets/images/background2.jpg");
-  /* background: linear-gradient(white, rgb(0, 110, 255)); */
+  /* background-image: url("../../../assets/images/background2.jpg"); */
+  background: linear-gradient(white, rgb(0, 110, 255));
 }
 
 .canvas-options {
@@ -71,7 +71,8 @@
   flex-direction: row;
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(19, 121, 255, 0.7);
+  /* background-color: rgba(19, 121, 255, 0.7); */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .clear-canvas-button {
