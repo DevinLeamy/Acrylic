@@ -18,6 +18,8 @@ export class CanvasPageComponent implements OnInit, OnDestroy {
   canvas_width = 500;
   canvas_height = 600;
   canvasLoaded: boolean = false;
+  undoStack: string[] = [];
+  max_undo_depth: number = 100;
 
   // Default canvas options
   canvasOptions: CanvasOptions = {
@@ -98,9 +100,26 @@ export class CanvasPageComponent implements OnInit, OnDestroy {
   // Canvas change handler
   storeCanvas() {
     // Save new canvas state
-    this.canvasService.persistCanvas(this.canvas);
+    this.canvasService.persistCanvas(this.canvas)
+
+    // Add canvas state to undo stack
+    this.undoStack.push(JSON.stringify(this.canvas));
+
+    if (this.undoStack.length > this.max_undo_depth) {
+      // Removes first element from the stack
+      this.undoStack.shift();
+    }
   }
 
+  // Renders top canvas on undo stack
+  undo() {
+    if (this.undoStack.length > 1) {
+      // Displays second to last frame (prevents undone frame from being re-rendered)
+      this.undoStack.pop();
+      const canvasData: string = this.undoStack.pop();
+      this.canvas.loadFromJSON(canvasData, () => {});
+    }
+  }
   // Avoid memory leaks
   ngOnDestroy() {
     this.canvasSub.unsubscribe();
